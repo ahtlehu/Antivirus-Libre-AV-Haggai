@@ -36,12 +36,3 @@ Development Steps
     4. Build the user interface: Create a user-friendly way to interact with your engine using a framework like Qt.
     5. Test rigorously: Continuously test your antivirus against a wide range of malware code that does not compile. No malware should run or it should be missing parts so no one can run it, or can scape from la cazerola. (in your isolated lab only!) and benign software to fine-tune your detection logic and minimize false positives. 
 ---------------------------------------------------------------------------------------
-Short answer: Build the Libre AV – Haggai 1.5 pipeline in stages: prototype (5k LOC, 2–3 dev‑months), MVP with SAST+basic DAST (50k LOC, 6–9 dev‑months), and production (200k LOC, 12–18 dev‑months); estimated cost ranges from $30k (prototype) to $600k+ (production) depending on team size and QA.
-High‑level plan and scope
-Core Principles
-    • No Static Analysis (SAST) — scan binaries and source for suspicious patterns and unsafe constructs. 
-    • No Dynamic Analysis (DAST) — run suspicious samples in a sandbox and monitor syscalls, network, and file activity. 
-Key Components
-    • Detection Engine — heuristics, signature DB, and optional ML model. 
-    • Scanning Interface — Qt GUI + CLI for pipelines. 
-    • Isolation Environment (Sandbox) — VM/container orchestration for safe execution. 
